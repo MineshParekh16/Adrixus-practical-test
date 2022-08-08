@@ -14,14 +14,14 @@ function App() {
           <div className="auth-inner">
             <Routes>
               <Route exact path="/" element={<Login />} />
-              <Route path="/sign-in" element={<Login />} />
-              <Route path="/sign-up" element={<SignUp />} />
+              <Route exact path="signin" element={<Login />} />
+              <Route exact path="signup" element={<SignUp />} />
             </Routes>
           </div>
         </div>
       </div>
       <Routes>
-        <Route path="/userDetails" element={<UserDetails />} />
+        <Route exact path="userDetails" element={<UserDetails />} />
       </Routes>
     </Router>
   );

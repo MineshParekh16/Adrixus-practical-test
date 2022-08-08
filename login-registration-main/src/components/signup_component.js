@@ -35,7 +35,7 @@ export default class SignUp extends Component {
       if(window.confirm("User Register Succesfully")){
         window.location.replace("/");
       }else{
-        window.location.replace("/sign-up");
+        window.location.replace("/signup");
       }
     }).catch((error) => {
       console.log('error: ' + error);
@@ -93,7 +93,7 @@ export default class SignUp extends Component {
           </button>
         </div>
         <p className="forgot-password text-right">
-          Already registered <a href="/sign-in">sign in?</a>
+          Already registered <a href="/signin">sign in?</a>
         </p>
       </form>
     );

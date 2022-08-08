@@ -83,7 +83,7 @@ export default class Login extends Component {
           </button>
         </div>
         <p className="forgot-password text-right">
-          <a href="/sign-up">Sign Up</a>
+          <a href="/signup">Sign Up</a>
         </p>
       </form>
     );
