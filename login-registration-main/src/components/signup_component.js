@@ -32,9 +32,11 @@ export default class SignUp extends Component {
     })
     .then((res) => res.json())
     .then((data) => {
-      if(window.confirm("User Register Succesfully")){
+      if(data.status === "ok"){
+        window.confirm("User Register Succesfully")
         window.location.replace("/");
       }else{
+        alert(data.error , "Please check details")
         window.location.replace("/signup");
       }
     }).catch((error) => {
