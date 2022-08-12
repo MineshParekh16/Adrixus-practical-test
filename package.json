@@ -1,0 +1,33 @@
+{
+	"name": "adrixus-practical-test",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start": "node login-registration-server-node-main/server",
+		"server": "nodemon login-registration-server-node-main/server",
+		"client": "npm start --prefix login-registration-main",
+		"dev": "concurrently \"npm run server\" \"npm run client\"",
+		"heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix login-registration-main && npm run build --prefix login-registration-main"
+	},
+	"author": "Minesh Parekh",
+	"license": "ISC",
+	"dependencies": {
+		"bcryptjs": "^2.4.3",
+		"body-parser": "^1.19.0",
+		"cors": "^2.8.5",
+		"dotenv": "^10.0.0",
+		"express": "^4.17.1",
+		"express-validator": "^6.11.1",
+		"fs": "^0.0.1-security",
+		"jsonwebtoken": "^8.5.1",
+		"mongoose": "^5.12.11",
+		"multer": "^1.4.2",
+		"serve-favicon": "^2.5.0",
+		"uuid": "^8.3.2"
+	},
+	"devDependencies": {
+		"concurrently": "^6.2.0",
+		"nodemon": "^2.0.7"
+	}
+}
